@@ -85,7 +85,7 @@ class Navigation extends React.Component {
     render() {
         return (
             <Container>
-                <Menu pageWrapId={"page-wrap"} outerContainerId={"outer-container"} /> */}
+                <Menu pageWrapId={"page-wrap"} outerContainerId={"outer-container"} />
                 <main id="page-wrap">
                     <NavContainer>
                         <Menu left styles={styles}  width={'20%'}>

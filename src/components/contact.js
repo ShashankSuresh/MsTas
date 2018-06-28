@@ -42,6 +42,7 @@ const Input = styled.input`
     background: transparent;
     border: 1px solid #fff;
     padding: 10px;
+    z-index: 1099;
 `
 const TextAreaContainer = styled.div`
     display: flex;
@@ -65,7 +66,8 @@ const Button = styled.button`
     font-size: 18px;
     border-radius: 43px;
     margin-top: 20px;
-    curosor: pointer;
+    cursor: pointer;
+    z-index: 1099;
 `
 
 const Contact = () => {

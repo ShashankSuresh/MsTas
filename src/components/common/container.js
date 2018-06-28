@@ -6,6 +6,7 @@ const Container = styled.section`
     width: 100%;
     margin: 0 auto;
     text-align: center;
+    z-index: 1099;
 
     &::after {
         display: block;

@@ -2,8 +2,10 @@ import React from 'react'
 import styled from 'styled-components'
 import Container from '../components/common/container'
 import Heading from '../components/common/heading'
-import Line from '../components/common/line'
-import Span from '../components/common/span'
+
+const ServicesContainer = Container.extend`
+    margin: 4rem auto 4rem auto;
+`
 
 const FormContainer = styled.div`
     display: block;
@@ -18,7 +20,7 @@ const Form = styled.form`
     align-items: center;
     margin: 0 auto;
     max-width: 880px;
-    height: 300px;
+    height: 350px;
 `
 
 const InputContainer = styled.div`
@@ -41,6 +43,13 @@ const Input = styled.input`
     border: 1px solid #fff;
     padding: 10px;
 `
+const TextAreaContainer = styled.div`
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    clear: both;
+    z-index: 1099;
+`
 
 const TextArea = styled.textarea`
     height: 100px;
@@ -59,9 +68,9 @@ const Button = styled.button`
     curosor: pointer;
 `
 
-const Services = () => {
+const Contact = () => {
     return (
-        <Container>
+        <ServicesContainer>
             <Heading span={"contact us"}/>
             <FormContainer>
                 <Form action="https://formspree.io/your@email.com"
@@ -70,12 +79,14 @@ const Services = () => {
                         <Input type="text" name="name" placeholder="Enter your name"/>
                         <Input type="email" name="_replyto" placeholder="Enter your email"/>
                     </InputContainer>
-                    <TextArea type="text" placeholder="Enter your message"></TextArea>
+                    <TextAreaContainer>
+                        <TextArea type="text" placeholder="Enter your message"></TextArea>
+                    </TextAreaContainer>
                     <Button type="submit" value="Send">Submit</Button>
                 </Form>
             </FormContainer>
-        </Container>
+        </ServicesContainer>
     )
 }
 
-export default Services;
+export default Contact;

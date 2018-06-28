@@ -5,7 +5,7 @@ import Helmet from 'react-helmet';
 const TemplateWrapper = ({ data, children }) => (
   <div>
     <Helmet
-      title="Gatsby React Boilerplate"
+      title="MsTas"
     />
     {children()}
   </div>

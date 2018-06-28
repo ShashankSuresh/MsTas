@@ -3,10 +3,18 @@ import styled from 'styled-components';
 import Container from '../components/common/container'
 import Heading from '../components/common/heading'
 
+const AboutContainer = Container.extend`
+    margin: 4rem auto 4rem auto;
+`
+
 const PragraphContainer = styled.div`
     display: block;
     width: 70%;
     margin: 0 auto;
+
+    & > p:first-child {
+        margin-bottom: 30px;
+    }
 `
 
 const Paragraph = styled.p`
@@ -22,7 +30,7 @@ const ParagraphColored = Paragraph.extend`
 
 const About = () => {
     return (
-        <Container>
+        <AboutContainer>
             <Heading span={"about us"}/>
             <PragraphContainer>
                 <Paragraph>
@@ -34,7 +42,7 @@ const About = () => {
                     Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
                 </ParagraphColored>
             </PragraphContainer>
-        </Container>
+        </AboutContainer>
     );
 }
 

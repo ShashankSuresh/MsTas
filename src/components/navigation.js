@@ -20,21 +20,13 @@ const NavContainer = styled.div`
     justify-content: space-between;
 `
 
-const Right = styled.div`
+const Right = styled.li`
     width: 65%;
     background: rgb(31, 31, 31);
     display: flex;
     align-items: center;
     height: 35%;
     margin: auto;
-`
-const Left = styled.div`
-    width: 35%;
-    text-align: center;
-    background-color: rgb(31, 31, 31);
-    overflow: hidden;
-    height: 100%;
-    align-content: center;
 `
 
 var styles = {
@@ -46,7 +38,9 @@ var styles = {
         top: '36px'
     },
     bmBurgerBars: {
-        background: '#fff'
+        background: '#fff',
+        opacity: 1,
+
     },
     bmCrossButton: {
         height: '24px',
@@ -83,13 +77,18 @@ var styles = {
 }
 
 class Navigation extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = { showNav: false };
+    }
+
     render() {
         return (
-            <Container id="outer-container">
-                <Menu pageWrapId={"page-wrap"} outerContainerId={"outer-container"} />
+            <Container>
+                <Menu pageWrapId={"page-wrap"} outerContainerId={"outer-container"} /> */}
                 <main id="page-wrap">
                     <NavContainer>
-                        <Menu left styles={styles} noOverlay width={'20%'}>
+                        <Menu left styles={styles}  width={'20%'}>
                             <Right>
                                 <Anchor id="home" className="menu-item" href="/">Home</Anchor>
                                 <Anchor id="home" className="menu-item" href="/">About</Anchor>

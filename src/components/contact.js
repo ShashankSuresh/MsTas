@@ -98,7 +98,7 @@ const Contact = () => {
         <ServicesContainer>
             <Heading span={"contact us"} />
             <FormContainer>
-                <Form action="https://formspree.io/your@email.com"
+                <Form action="https://formspree.io/ruchi@mstas.in"
                     method="POST">
                     <InputContainer>
                         <Input type="text" name="name" placeholder="Enter your name" />

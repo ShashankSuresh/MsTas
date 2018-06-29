@@ -5,6 +5,10 @@ import TextLoop from 'react-text-loop';
 const Span = styled.span`
     color: #fff;
     font-size: 40px;
+
+    @media (min-width: 320px) and (max-width: 768px) {
+        font-size: 28px;
+    }
 `
 
 const Typing = props => {

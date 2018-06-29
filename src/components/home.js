@@ -18,6 +18,11 @@ const Container = styled.section`
   justify-content: center;
   margin-right: 4em;
   overflow: hidden;
+
+  @media (min-width: 320px) and (max-width: 768px) {
+    margin-right: 0;
+    padding: 20px;
+  }
 `;
 
 const H1 = styled.h1`
@@ -25,32 +30,57 @@ const H1 = styled.h1`
   font-weight: 900;
   letter-spacing: -4px;
   line-height: 125px;
+  
+  @media (min-width: 320px) and (max-width: 768px) { 
+    line-height: 80px;
+  }
 `
 
 const TitleWhite = H1.extend`
   color: ${colorWhite};
+
+  @media (min-width: 320px) and (max-width: 768px) { 
+    font-size: 4em;
+  }
 `
 
 const TitleBlue = H1.extend`
   color: ${colorBlue};
+
+  @media (min-width: 320px) and (max-width: 768px) { 
+    font-size: 3.2em;
+  }
 `
 
 const H3 = styled.h3`
     font-size: 40px;
     color: ${colorLightGrey};
     margin-top: 1em;
+
+    @media (min-width: 320px) and (max-width: 768px) { 
+      margin-top: 10px;
+      font-size: 28px;
+    }
 `;
+
+const SocialMediaContainer = styled.div`
+    @media (min-width: 320px) and (max-width: 768px) {
+        display: none;
+    }
+`
 
 const BannerContainer = () => (
   <Container>
+    <Particle />
     <TitleWhite>Styled</TitleWhite>
     <TitleBlue>Components</TitleBlue>
     <H3>We are bla bla bla bla bla bla
       <span>    </span>
-      <Typing data={["we do this", "we do that", "we do everything"]} />
+      <Typing />
     </H3>
-    <Particle />
-    <Social position={"absolute"} left={"33px"} display={"block"} footerFlag={false}/>
+    <SocialMediaContainer>
+      <Social position={"absolute"} left={"33px"} display={"block"} footerFlag={false}/>
+    </SocialMediaContainer>
   </Container>
 );
 

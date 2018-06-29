@@ -10,16 +10,33 @@ const ImageContainer = styled.div`
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
+
+    @media (min-width: 320px) and (max-width: 768px) {
+        display: block;
+    }
 `
 
 const ImageContent = styled.div`
     flex: 1; 
+
+    @media (min-width: 320px) and (max-width: 768px) {
+        margin-bottom: 4rem;
+    }
 `
 
 const ImageParagraph = styled.p`
     color: #fff;
     font-size: 22px;
     margin-top: 40px;
+
+    @media (min-width: 320px) and (max-width: 768px) {
+        font-size: 18px;
+    }
+    
+`
+
+const Image = styled.img`
+    height: ${props => props.Height ? "150px" : "100px"};
 `
 
 const Services = () => {
@@ -28,21 +45,21 @@ const Services = () => {
             <Heading span={"services"}/>
             <ImageContainer>
                 <ImageContent>
-                    <img src={browserSVG} alt="" height="150" />
+                    <Image src={browserSVG} alt="" height />
                     <Line color={"#00b4d9"} />
                     <ImageParagraph>
                         Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
                 </ImageParagraph>
                 </ImageContent>
                 <ImageContent>
-                    <img src={browserSVG} alt="" height="150" />
+                    <Image src={browserSVG} alt="" height />
                     <Line color={"#00b4d9"} />
                     <ImageParagraph>
                         Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
                 </ImageParagraph>
                 </ImageContent>
                 <ImageContent>
-                    <img src={browserSVG} alt="" height="150" />
+                    <Image src={browserSVG} alt="" height />
                     <Line color={"#00b4d9"} />
                     <ImageParagraph>
                         Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.

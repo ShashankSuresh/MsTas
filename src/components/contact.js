@@ -21,17 +21,28 @@ const Form = styled.form`
     margin: 0 auto;
     max-width: 880px;
     height: 350px;
+
+    @media (min-width: 320px) and (max-width: 768px) {
+        height: 400px;
+    }
 `
 
 const InputContainer = styled.div`
     display: flex;
     justify-content: space-between;
-    height: 80px;
     width: 98%;
-    margin-bottom: 30px;
 
     & > input:first-child {
         margin-right: 6rem;
+
+        @media (min-width: 320px) and (max-width: 768px) {
+            margin-right: 0;
+            margin-bottom: 12px;
+        }
+    }
+
+    @media (min-width: 320px) and (max-width: 768px) {
+        display: block;
     }
 `
 
@@ -43,6 +54,10 @@ const Input = styled.input`
     border: 1px solid #fff;
     padding: 10px;
     z-index: 1099;
+
+    @media (min-width: 320px) and (max-width: 768px) {
+        width: 80%;
+    }
 `
 const TextAreaContainer = styled.div`
     display: flex;
@@ -50,6 +65,10 @@ const TextAreaContainer = styled.div`
     overflow: hidden;
     clear: both;
     z-index: 1099;
+
+    @media (min-width: 320px) and (max-width: 768px) {
+        display: block;
+    }
 `
 
 const TextArea = styled.textarea`
@@ -59,6 +78,10 @@ const TextArea = styled.textarea`
     background: transparent;
     border: 1px solid #fff;
     padding: 30px;
+
+    @media (min-width: 320px) and (max-width: 768px) {
+        width: 70%;
+    }
 `
 
 const Button = styled.button`
@@ -73,13 +96,13 @@ const Button = styled.button`
 const Contact = () => {
     return (
         <ServicesContainer>
-            <Heading span={"contact us"}/>
+            <Heading span={"contact us"} />
             <FormContainer>
                 <Form action="https://formspree.io/your@email.com"
                     method="POST">
                     <InputContainer>
-                        <Input type="text" name="name" placeholder="Enter your name"/>
-                        <Input type="email" name="_replyto" placeholder="Enter your email"/>
+                        <Input type="text" name="name" placeholder="Enter your name" />
+                        <Input type="email" name="_replyto" placeholder="Enter your email" />
                     </InputContainer>
                     <TextAreaContainer>
                         <TextArea type="text" placeholder="Enter your message"></TextArea>

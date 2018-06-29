@@ -9,6 +9,10 @@ const Title = styled.h2`
     text-transform: capitalize;
     font-size: 70px
     color: #fff;
+
+    @media (min-width: 320px) and (max-width: 768px) {
+        font-size: 40px;
+    }
 `
 
 class Heading extends React.Component {

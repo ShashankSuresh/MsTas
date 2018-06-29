@@ -88,7 +88,7 @@ class Navigation extends React.Component {
                 <Menu pageWrapId={"page-wrap"} outerContainerId={"outer-container"} />
                 <main id="page-wrap">
                     <NavContainer>
-                        <Menu left styles={styles}  width={'20%'}>
+                        <Menu left styles={styles}  width={'100%'}>
                             <Right>
                                 <Anchor id="home" className="menu-item" href="/">Home</Anchor>
                                 <Anchor id="home" className="menu-item" href="/">About</Anchor>

@@ -5,6 +5,7 @@ import Heading from '../components/common/heading'
 
 const AboutContainer = Container.extend`
     margin: 4rem auto 4rem auto;
+    z-index: 1099;
 `
 
 const PragraphContainer = styled.div`
@@ -22,6 +23,11 @@ const Paragraph = styled.p`
     font-size: 26px;
     font-weight: bold;
     letter-spacing: -1px;
+
+    @media (min-width: 320px) and (max-width: 768px) {
+        font-size: 18px;
+        font-weight: normal;
+    }
 `
 
 const ParagraphColored = Paragraph.extend`

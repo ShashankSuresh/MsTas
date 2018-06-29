@@ -31,6 +31,7 @@ const InputContainer = styled.div`
     display: flex;
     justify-content: space-between;
     width: 98%;
+    z-index: 1100;
 
     & > input:first-child {
         margin-right: 6rem;
@@ -54,6 +55,7 @@ const Input = styled.input`
     border: 1px solid #fff;
     padding: 10px;
     z-index: 1099;
+    color: #fff;
 
     @media (min-width: 320px) and (max-width: 768px) {
         width: 80%;
@@ -78,6 +80,7 @@ const TextArea = styled.textarea`
     background: transparent;
     border: 1px solid #fff;
     padding: 30px;
+    color: #fff;
 
     @media (min-width: 320px) and (max-width: 768px) {
         width: 70%;

@@ -36,7 +36,7 @@ const ImageParagraph = styled.p`
 `
 
 const Image = styled.img`
-    height: ${props => props.Height ? "150px" : "100px"};
+    height: ${props => props.Height ? "150px" : "70px"};
 `
 
 const Services = () => {

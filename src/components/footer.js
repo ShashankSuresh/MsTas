@@ -58,7 +58,7 @@ const Footer = () => {
             <Particles height={"10vh"} />
             <ContainerBoot>
                 <Row>
-                    <Social position={"relative"} left={"6%"} display={"inline-block"} footerFlag={true} />
+                    <Social position={"relative"} left={"6%"} fontSize display={"inline-block"} footerFlag={true} />
                     <ContactUsContainer>
                         <ContactUsParagraph fontSize={"28px"}>Get in touch</ContactUsParagraph>
                         <ContactUsParagraph color fontSize={"20px"} fontWeight={"200"}>hello@mstas.in</ContactUsParagraph>

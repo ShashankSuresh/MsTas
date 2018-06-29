@@ -10,7 +10,7 @@ const Container = styled.div`
 `
 
 const Icon = styled.a`
-    font-size: 22px;
+    font-size: ${props => props.FontSize ? "12px" : "22px"};
     display: ${props => props.Display};
     margin-right: ${props => props.Margin ? '0px' : '22px'};
     margin-bottom: 40px;
@@ -32,10 +32,10 @@ class Social extends React.Component {
     render() {
         return (
             <Container Position={this.props.position} left={this.props.left}>
-                <Icon bgColor={'blue'} Display={this.props.display} Margin={this.props.margin} FooterFlag={this.props.footerFlag}><FontAwesome.FaFacebook /></Icon>
-                <Icon bgColor={'red'} Display={this.props.display} Margin={this.props.margin} FooterFlag={this.props.footerFlag}><FontAwesome.FaInstagram /></Icon>
-                <Icon bgColor={'pink'} Display={this.props.display} Margin={this.props.margin} FooterFlag={this.props.footerFlag}><FontAwesome.FaWhatsapp /></Icon>
-                <Icon bgColor={'yellow'} Display={this.props.display} Margin={this.props.margin} FooterFlag={this.props.footerFlag}><FontAwesome.FaTwitter /></Icon>
+                <Icon bgColor={'blue'} Display={this.props.display} Margin={this.props.margin} FooterFlag={this.props.footerFlag} FontSize={this.props.fontSize}><FontAwesome.FaFacebook /></Icon>
+                <Icon bgColor={'red'} Display={this.props.display} Margin={this.props.margin} FooterFlag={this.props.footerFlag} FontSize={this.props.fontSize}><FontAwesome.FaInstagram /></Icon>
+                <Icon bgColor={'pink'} Display={this.props.display} Margin={this.props.margin} FooterFlag={this.props.footerFlag} FontSize={this.props.fontSize}><FontAwesome.FaWhatsapp /></Icon>
+                <Icon bgColor={'yellow'} Display={this.props.display} Margin={this.props.margin} FooterFlag={this.props.footerFlag} FontSize={this.props.fontSize}><FontAwesome.FaTwitter /></Icon>
             </Container>
         );
     }
@@ -46,7 +46,8 @@ Social.propTypes = {
     left: PropTypes.string,
     display: PropTypes.string,
     margin: PropTypes.string,
-    footerFlag: PropTypes.bool
+    footerFlag: PropTypes.bool,
+    fontSize: PropTypes.string
 };
 
 export default Social;
